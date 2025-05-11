@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Shashwat Shahi - Machine Learning Engineer</title>
+  <meta content="Welcome to my portfolio | Machine Learning Engineer at Novartis" name="description">
+  <meta content="Shashwat Shahi, Machine Learning, AI, Deep Learning" name="keywords">
+
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <style>
+    .portfolio-item.hidden-project {
+      display: none !important;
+    }
+    #show-more-btn {
+      margin-top: 30px;
+      padding: 10px 30px;
+      font-size: 16px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+    }
+    #show-more-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    /* Elegant Project Card Design */
+    .portfolio-wrap {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .portfolio-wrap:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    
+    .portfolio-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      padding: 30px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .portfolio-header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.1);
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .portfolio-wrap:hover .portfolio-header::before {
+      transform: translateX(0);
+    }
+    
+    .portfolio-icon {
+      width: 70px;
+      height: 70px;
+      background: rgba(255,255,255,0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 15px;
+      font-size: 32px;
+      color: #149ddd;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .portfolio-wrap:hover .portfolio-icon {
+      background: #fff;
+      transform: rotate(360deg);
+      transition: all 0.5s ease;
+    }
+    
+    .portfolio-title {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .portfolio-category {
+      color: rgba(255,255,255,0.8);
+      font-size: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .portfolio-content {
+      padding: 25px;
+    }
+    
+    .portfolio-content p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      min-height: 60px;
+    }
+    
+    .portfolio-link {
+      display: inline-flex;
+      align-items: center;
+      color: #149ddd;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    
+    .portfolio-link:hover {
+      color: #0077b5;
+      text-decoration: none;
+      transform: translateX(5px);
+    }
+    
+    .portfolio-link i {
+      margin-left: 5px;
+      transition: margin 0.3s ease;
+    }
+    
+    .portfolio-link:hover i {
+      margin-left: 10px;
+    }
+    
+    /* Category specific colors */
+    .portfolio-header.ml-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    
+    .portfolio-header.nlp-header {
+      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    }
+    
+    .portfolio-header.cv-header {
+      background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+    
+    .portfolio-header.web-header {
+      background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    }
+    
+    /* Ensure 3 columns layout */
+    @media (min-width: 992px) {
+      .portfolio-container .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+
+      <div class="profile">
+        <img src="assets/img/mascot_comp.jpg" alt="Digital Avatar" class="img-fluid rounded-circle">
+        <h1 class="text-light"><a href="index.html">Shashwat Shahi</a></h1>
+        <div class="social-links mt-3 text-center">
+          <a href="https://github.com/shashwat-shahi" class="github" target="_blank"><i class="bx bxl-github"></i></a>
+          <a href="https://www.linkedin.com/in/shashwat-shahi/" class="linkedin" target="_blank"><i class="bx bxl-linkedin"></i></a>
+          <a href="https://scholar.google.com/citations?user=FO0IGT8AAAAJ&hl=en" class="google-scholar" target="_blank"><i class="bx bxl-google"></i></a>          <!-- <a href="https://www.instagram.com/shashwat_shahi/" class="instagram" target="_blank"><i class="bx bxl-instagram"></i></a>
+          <a href="https://twitter.com/shashwat_shahi_" class="twitter" target="_blank"><i class="bx bxl-twitter"></i></a>
+          <a href="https://www.facebook.com/shashwat.shahi.538/" class="facebook" target="_blank"><i class="bx bxl-facebook"></i></a> -->
+        </div>
+      </div>
+
+      <nav class="nav-menu">
+        <ul>
+          <li class="active"><a href="index.html"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#facts"><i class="bx bx-badge"></i> <span>Patents & Publications</span></a></li>
+          <li><a href="#skills"><i class="bx bx-server"></i> <span>Skills & Technologies</span></a></li>
+          <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+          <li><a href="#projects"><i class="bx bx-book-content"></i> <span>Projects</span></a></li>
+          <li><a href="#certifications"><i class="bx bx-award"></i> <span>Certifications</span></a></li>
+          <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact Details</span></a></li>
+        </ul>
+      </nav>
+      <button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+    <div class="hero-container" data-aos="fade-in">
+      <h1>Shashwat Shahi</h1>
+      <br>
+      <p>I'm a <span class="typed" data-typed-items="Machine Learning Engineer., AI & LLM Expert., Deep Learning Specialist., Learner for life :)."></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <img src="assets/img/profile-img_comp.jpg" class="img-fluid" alt="Profile Image">
+          </div>
+          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
+            <h3>Machine Learning Researcher</h3>
+            <p class="font-italic">
+              Computer Vision Expert | Deep Learning Researcher | Multimodal AI Specialist
+            </p>
+            <p>
+              I'm Shashwat Shahi, a Machine Learning Researcher at Novartis AG's Institute of Biomedical Research, specializing in developing novel AI solutions for healthcare applications. With extensive expertise in computer vision, deep learning, and multimodal learning approaches, I focus on building large-scale vision models for medical image analysis.
+            </p>
+            <p>
+              My research involves developing cutting-edge architectures for feature extraction from WSI images, leveraging masked-image-modeling techniques, and implementing multi-resolution analysis with various attention mechanisms. I have experience training models with up to 1.5 billion parameters using distributed processing techniques.
+            </p>
+            <p>
+              Passionate about pushing the boundaries of AI in healthcare, I have filed multiple patents in machine learning and have been awarded excellence certification in Computer Vision by OpenCV. My expertise spans across object detection, segmentation, tracking, and model optimization techniques including quantization and pruning.
+            </p>
+            <!-- <code>
+              <i class="icofont-rounded-right"></i> "Awarded with excellence certification in Computer Vision by OpenCV." <br>  
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+              &emsp;&emsp;&emsp;<b> -Shashwat Shahi</b>
+            </code> -->
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Patents & Publications Section ======= -->
+    <section id="facts" class="facts section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Patents & Publications</h2>
+          <p>My research contributions in Machine Learning and Artificial Intelligence</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="icofont-badge"></i>
+              </div>
+              <div class="patent-content">
+                <h4>A multimodal learning approach with Priority Weighted Graph Neural Networks</h4>
+                <div class="patent-meta">
+                  <span class="patent-type">Patent</span>
+                  <span class="patent-number">Patent No.: 20231051755</span>
+                </div>
+                <p>To be published in ICDMAI 2025</p>
+                <a href="#" class="patent-link">View Patent <i class="icofont-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="icofont-badge"></i>
+              </div>
+              <div class="patent-content">
+                <h4>Toward Space-Efficient Semantic Querying with Graph Databases</h4>
+                <div class="patent-meta">
+                  <span class="patent-type">Patent</span>
+                  <span class="patent-number">Patent No.: 20231920198</span>
+                </div>
+                <p>Published in leading journal</p>
+                <a href="#" class="patent-link">View Patent <i class="icofont-arrow-right"></i></a>
+                <a href="#" class="paper-link">Read Paper <i class="icofont-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="patent-item">
+              <div class="patent-icon">
+                <i class="icofont-badge"></i>
+              </div>
+              <div class="patent-content">
+                <h4>An Unsupervised Image Processing Approach for Weld Quality Inspection</h4>
+                <div class="patent-meta">
+                  <span class="patent-type">Patent</span>
+                  <span class="patent-number">Patent No.: 202221033807</span>
+                </div>
+                <p>Innovative computer vision solution for industrial applications</p>
+                <a href="#" class="patent-link">View Patent <i class="icofont-arrow-right"></i></a>
+                <a href="#" class="paper-link">Read Paper <i class="icofont-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="patent-item publication">
+              <div class="patent-icon">
+                <i class="icofont-paper"></i>
+              </div>
+              <div class="patent-content">
+                <h4>Deep Recurrent Neural Network based audio speech recognition systems</h4>
+                <div class="patent-meta">
+                  <span class="patent-type">Publication</span>
+                  <span class="journal">IT in Industry Journal</span>
+                </div>
+                <p>Research on advanced speech recognition using deep learning architectures</p>
+                <a href="http://it-in-industry.org/index.php/itii/article/view/434" class="paper-link" target="_blank">Read Paper <i class="icofont-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="achievement-stats">
+              <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                  <div class="stat-box">
+                    <i class="icofont-badge"></i>
+                    <h3>4</h3>
+                    <p>Patents Filed</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="stat-box">
+                    <i class="icofont-paper"></i>
+                    <h3>3+</h3>
+                    <p>Papers Published</p>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                  <div class="stat-box">
+                    <i class="icofont-world"></i>
+                    <h3>Multiple</h3>
+                    <p>Geographies</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Patents & Publications Section -->
+
+    <!-- ======= Skills & Technologies Section ======= -->
+    <section id="skills" class="services">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Skills & Technologies</h2>
+          <p>My technical expertise spans across various domains of ML/AI:</p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up">
+            <div class="icon"><i class="icofont-code"></i></div>
+            <h4 class="title">Programming Languages & Core Frameworks</h4>
+            <p class="description">Python, C++, Java, CUDA, SQL, CQL, Scala, JavaScript, TypeScript, PyTorch, TensorFlow, Keras, JAX, scikit-learn, NumPy, Pandas, Caffe</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="100">
+            <div class="icon"><i class="icofont-brain-alt"></i></div>
+            <h4 class="title">Deep Learning Architectures & Techniques</h4>
+            <p class="description">CNNs, RNNs, LSTMs, GRUs, Transformers, Vision Transformers (ViT), DINO v2, ResNet, EfficientNet, GANs, VAEs, Attention Mechanisms, Transfer Learning, Multimodal Learning, Knowledge Distillation, MIM, Contrastive Learning</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="200">
+            <div class="icon"><i class="icofont-eye"></i></div>
+            <h4 class="title">Computer Vision</h4>
+            <p class="description">OpenCV, YOLO, Faster R-CNN, Mask R-CNN, Vision Transformers, Object Detection, Segmentation, Classification, Tracking, Feature Extraction, Masked-Image-Modeling, DeepStream SDK, ONNX, Nvidia TensorRT, Model Quantization, Pruning</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="300">
+            <div class="icon"><i class="icofont-text-width"></i></div>
+            <h4 class="title">Natural Language Processing</h4>
+            <p class="description">NLTK, SpaCy, Gensim, BERT, GPT, T5, RoBERTa, Word2Vec, GloVe, Text Classification, Named Entity Recognition (NER), Sentiment Analysis, Text Embeddings, Sequence-to-Sequence, Machine Translation, Tokenization</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="400">
+            <div class="icon"><i class="icofont-robot"></i></div>
+            <h4 class="title">Large Language Models & Generative AI</h4>
+            <p class="description">GPT-4, Claude, Llama, Mistral, Gemini, CLIP, Stable Diffusion, Latent Diffusion Models, RAG, LangChain, LangGraph, Prompt Engineering, Fine-Tuning, LoRA, QLoRA, PEFT, Instruction Tuning, AI Agents, Vector Databases</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="500">
+            <div class="icon"><i class="icofont-cloud"></i></div>
+            <h4 class="title">Cloud & MLOps</h4>
+            <p class="description">AWS (SageMaker, EC2, S3, Lambda, CloudFormation, CloudFront), GCP, Azure ML, Docker, Kubernetes, MLFlow, Weights & Biases, TensorBoard, Airflow, Kubeflow, CI/CD, GitHub Actions, Model Versioning, A/B Testing</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="600">
+            <div class="icon"><i class="icofont-database"></i></div>
+            <h4 class="title">Data Engineering & Databases</h4>
+            <p class="description">Neo4j, MongoDB, PostgreSQL, MySQL, Redis, Elasticsearch, Pinecone, Milvus, ChromaDB, Apache Kafka, Apache Spark, ETL Pipelines, Data Warehousing, Graph Databases, Knowledge Graphs</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="700">
+            <div class="icon"><i class="icofont-gear"></i></div>
+            <h4 class="title">Specialized ML Tools & Libraries</h4>
+            <p class="description">Hugging Face, Unsloth, Ray, Gradio, Streamlit, FastAPI, Flask, Django, Plotly, Seaborn, OpenAI API, Anthropic API, Groq, LlamaIndex, Haystack, Diffusers, Transformers, PIL/Pillow</p>
+          </div>
+          <div class="col-lg-4 col-md-6 icon-box" data-aos="fade-up" data-aos-delay="800">
+            <div class="icon"><i class="icofont-processor"></i></div>
+            <h4 class="title">High-Performance Computing</h4>
+            <p class="description">CUDA Programming, Distributed Training (DDP, FSDP), Multi-GPU Processing, Model Parallelism, Mixed Precision Training (fp16, bf16), Gradient Accumulation, Memory Optimization, TPU Programming, INT8 Quantization</p>
+          </div>
+        </div>
+
+
+
+      </div>
+    </section><!-- End Skills & Technologies Section -->
+
+    <!-- ======= Resume Section ======= -->
+    <section id="resume" class="resume section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Resume</h2>
+          <p>
+            Download my latest resume from <a href="assets/ShashwatShahi_Resume.pdf" download target="_blank"> here</a>.
+          </p>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6" data-aos="fade-up">
+            <h3 class="resume-title">Education</h3>
+            <div class="resume-item">
+              <h4>Master of Science in Computer Software Engineering</h4>
+              <h5>Expected: April 2025</h5>
+              <p><em>Northeastern University, Boston, MA</em></p>
+              <p>
+                <li>GPA: 3.95/4.0</li>
+                <li>Relevant Coursework: Generative AI, Natural Language Processing, Data Structures and Algorithms, Object Oriented Design, Design Patterns</li> 
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Bachelor of Engineering, Computer Science</h4>
+              <h5>2017 - 2021</h5>
+              <p><em>Visvesvaraya Technological University, Bengaluru</em></p>
+            </div>
+            <!-- <div class="resume-item">
+              <h4>Higher Secondary School, PCM (Intermediate) </h4>
+              <h5>2015 - 2017</h5>
+              <p><em>Sunshine Prep./ High School, Muzaffarpur, Bihar</em></p>
+              <p>
+                <li>12th CBSE Board</li>
+              </p>
+            </div>
+            <div class="resume-item">
+              <h4>Senior Secondary School (Metriculation)</h4>
+              <h5>2015</h5>
+              <p><em>Sunshine Prep./ High School, Muzaffarpur, Bihar</em></p>
+              <p>
+                <li>10th CBSE Board: 10.00 CGPA</li>
+              </p>
+            </div> -->
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="resume-title">Professional Experiences</h3>
+            <div class="resume-item">
+              <h4>Novartis AG (Institute of Biomedical Research)</h4>
+              <h5>January 2025 - Present</h5>
+              <p><em>Machine Learning Researcher - Cambridge, MA</em></p>
+              <ul>
+                <li>Developing a novel large vision model for WSI image analysis using masked-image-modeling with masked language modeling</li>
+                <li>Training models with up to 1.5 billion parameters using DDP and FSDP</li>
+                <li>Implementing multi-resolution analysis with multiple attention mechanisms for enhanced model interpretability</li>
+                <li>Leveraging contrastive learning approaches with DINO v2, Vision Transformers, and ResNet-50 architectures</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Northeastern University</h4>
+              <h5>August 2024 - December 2024</h5>
+              <p><em>Research and Course Assistant - Generative AI and LLM</em></p>
+              <ul>
+                <li>Researched applications of Generative AI, LLMs, and RAGs with Prof. Ramin Mohammadi</li>
+                <li>Designed labs and assignments for Generative AI coursework in partnership with Coursera</li>
+                <li>Created content on deep learning architectures including CNNs, RNNs, LSTMs, Transformers, GANs</li>
+              </ul>
+            </div>
+            <div class="resume-item">
+              <h4>Tata Consultancy Services Ltd.</h4>
+              <h5>August 2021 - August 2023</h5>
+              <p><em>Machine Learning Engineer (Research) - Bengaluru, India</em></p>
+              <ul>
+                <li>Invented DKI-ANFIS architecture for welding joint quality assessment with 82.4% accuracy, generating ~$100k revenue</li>
+                <li>Built and deployed models using YOLO, Faster R-CNN, Mask R-CNN, Vision Transformer, ResNet architectures</li>
+                <li>Optimized 30+ camera multi-GPU ML pipeline using INT8 quantization and pruning for 1.5x performance improvement</li>
+                <li>Filed four patents across multiple geographies</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Resume Section -->
+
+    <!-- ======= Projects Section ======= -->
+    <!-- ======= Projects Section with Improved Layout ======= -->
+<section id="projects" class="portfolio">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Projects</h2>
+      <p>A selection of my key projects showcasing expertise in Machine Learning, NLP, and Computer Vision.</p>
+    </div>
+
+    <div class="row" data-aos="fade-up">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="portfolio-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-ml">ML/AI</li>
+          <li data-filter=".filter-nlp">Generative AI</li>
+          <li data-filter=".filter-cv">Computer Vision</li>
+          <li data-filter=".filter-web">Web Apps</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="150">
+
+      <!-- Top AI/ML Projects (Always Visible) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ml filter-nlp">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header ml-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-brain"></i>
+            </div>
+            <h3 class="portfolio-title">Career Craft AI</h3>
+            <div class="portfolio-category">Machine Learning / NLP</div>
+          </div>
+          <div class="portfolio-content">
+            <p>AI-powered skill gap analysis and job matching platform using Graph Neural Networks and Neo4j with 85% accuracy</p>
+            <a href="https://github.com/shashwat-shahi/CareerCraftAI" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-support"></i>
+            </div>
+            <h3 class="portfolio-title">Support Ticket Classifier</h3>
+            <div class="portfolio-category">NLP / LLM</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Automated ticket routing with 78% accuracy using LLMs and RAG with Llama3.1-8B</p>
+            <a href="https://github.com/shashwat-shahi/Support-Ticket-Classifier-with-RAG" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-data"></i>
+            </div>
+            <h3 class="portfolio-title">Text to SQL Generator</h3>
+            <div class="portfolio-category">NLP / LLM</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Fine-tuned LLMs for SQL generation with 16x improvement using LoRA and QLoRA</p>
+            <a href="https://github.com/shashwat-shahi/Text-to-SQL-Generation-using-Fine-Tuned-LLMs" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv filter-ml">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-image-alt"></i>
+            </div>
+            <h3 class="portfolio-title">Text-to-Image Generation</h3>
+            <div class="portfolio-category">Computer Vision / ML</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Fine-tuned CLIP text encoder on Flickr8k with fp16 training, reducing loss from 0.20 to 0.06</p>
+            <a href="https://github.com/shashwat-shahi/Text-to-Image-Generation-with-Stable-Diffusion" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv filter-nlp">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-photo-album"></i>
+            </div>
+            <h3 class="portfolio-title">Image Captioning</h3>
+            <div class="portfolio-category">Computer Vision / NLP</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Dual-architecture pipeline with CNN encoders and GRU/LSTM decoders, implementing beam search</p>
+            <a href="https://github.com/shashwat-shahi/Image-Captioning-using-GRU-LSTM" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv filter-ml">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-shape-polygon"></i>
+            </div>
+            <h3 class="portfolio-title">GAN with CIFAR-10</h3>
+            <div class="portfolio-category">Computer Vision / ML</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Generative Adversarial Network implementation for generating CIFAR-10 images</p>
+            <a href="https://github.com/shashwat-shahi/Generative-Adversarial-Networks-with-CIFAR-10" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hidden Projects (Shown on Click) -->
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-category-alt"></i>
+            </div>
+            <h3 class="portfolio-title">CIFAR-10 Classification</h3>
+            <div class="portfolio-category">Computer Vision</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Three CNN architectures with data augmentation, L2 regularization, dropout, and batch normalization</p>
+            <a href="https://github.com/shashwat-shahi/CIFAR-10-Image-Classification" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-link-alt"></i>
+            </div>
+            <h3 class="portfolio-title">VAE-CLIP Integration</h3>
+            <div class="portfolio-category">Computer Vision / ML</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Integration of Variational Autoencoders with OpenAI's CLIP model for enhanced image understanding</p>
+            <a href="https://github.com/shashwat-shahi/VAE-and-CLIP-Integration" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header ml-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-money"></i>
+            </div>
+            <h3 class="portfolio-title">Loan Application Classifier</h3>
+            <div class="portfolio-category">Machine Learning</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Neural network-based loan application classification system</p>
+            <a href="https://github.com/shashwat-shahi/Loan-Application-Classifier" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-news"></i>
+            </div>
+            <h3 class="portfolio-title">News Article Classification</h3>
+            <div class="portfolio-category">NLP / ML</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Comparative analysis of traditional ML and modern LLM approaches for news categorization</p>
+            <a href="https://github.com/shashwat-shahi/News-Article-Classification-Naive-Bayes-vs-LLM" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-chat"></i>
+            </div>
+            <h3 class="portfolio-title">RAG Chatbot</h3>
+            <div class="portfolio-category">NLP / LLM</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Retrieval-Augmented Generation chatbot using Pinecone vector database and GROQ</p>
+            <a href="https://github.com/shashwat-shahi/RAG-Chatbot-with-Pinecone" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-search-alt"></i>
+            </div>
+            <h3 class="portfolio-title">Legal Precedent Finder</h3>
+            <div class="portfolio-category">NLP / LLM</div>
+          </div>
+          <div class="portfolio-content">
+            <p>RAG system built with LangChain to identify relevant legal precedents</p>
+            <a href="https://github.com/shashwat-shahi/Legal-Precedent-Finder-RAG-with-Langchain" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-nlp hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header nlp-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-question-mark"></i>
+            </div>
+            <h3 class="portfolio-title">Legal Query System</h3>
+            <div class="portfolio-category">NLP / LLM</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Comparative study of RAG and traditional approaches for legal question answering</p>
+            <a href="https://github.com/shashwat-shahi/Legal-Precedent-Query-System-with-RAG-vs-Non-RAG-Comparison" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header ml-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-book"></i>
+            </div>
+            <h3 class="portfolio-title">ML Foundations</h3>
+            <div class="portfolio-category">Machine Learning</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Core concepts implementation covering Linear Algebra, Calculus, Statistics, and Probability</p>
+            <a href="https://github.com/shashwat-shahi/ML-Foundations" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header ml-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-spreadsheet"></i>
+            </div>
+            <h3 class="portfolio-title">MNIST Digit Reconstruction</h3>
+            <div class="portfolio-category">Machine Learning</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Vanilla auto-encoder implementation for MNIST handwritten digits dataset</p>
+            <a href="https://github.com/shashwat-shahi/MNIST-Digit-Reconstruction-with-Vanilla-Auto-Encoder" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-ml hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header ml-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-briefcase-alt-2"></i>
+            </div>
+            <h3 class="portfolio-title">Jobs Applier AI Agent</h3>
+            <div class="portfolio-category">Machine Learning</div>
+          </div>
+          <div class="portfolio-content">
+            <p>AI agent that automates job applications using artificial intelligence</p>
+            <a href="https://github.com/shashwat-shahi/Jobs_Applier_AI_Agent_AIHawk" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header web-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-user-circle"></i>
+            </div>
+            <h3 class="portfolio-title">Portfolio Website</h3>
+            <div class="portfolio-category">Web Development</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Personal portfolio website showcasing projects and achievements</p>
+            <a href="https://github.com/shashwat-shahi/shashwat-shahi.github.io" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header web-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-calendar-event"></i>
+            </div>
+            <h3 class="portfolio-title">Husky Events</h3>
+            <div class="portfolio-category">Web Development</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Event management dashboard for Northeastern University students with seamless booking experience</p>
+            <a href="https://github.com/shashwat-shahi/husky-events" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header web-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-task"></i>
+            </div>
+            <h3 class="portfolio-title">Task Sphere</h3>
+            <div class="portfolio-category">Web Development</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Task management platform with visual Kanban boards and advanced analytics</p>
+            <a href="https://github.com/shashwat-shahi/Task-Sphere" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-web hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header web-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-store"></i>
+            </div>
+            <h3 class="portfolio-title">E-Commerce Platform</h3>
+            <div class="portfolio-category">Web Development</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Full-stack e-commerce platform built with Spring Boot backend and React frontend</p>
+            <a href="https://github.com/shashwat-shahi/ecommerce" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 portfolio-item filter-cv hidden-project" data-hidden="true">
+        <div class="portfolio-wrap">
+          <div class="portfolio-header cv-header">
+            <div class="portfolio-icon">
+              <i class="bx bx-car"></i>
+            </div>
+            <h3 class="portfolio-title">Number Plate Recognition</h3>
+            <div class="portfolio-category">Computer Vision</div>
+          </div>
+          <div class="portfolio-content">
+            <p>Computer vision system for automatic number plate detection and recognition</p>
+            <a href="https://github.com/shashwat-shahi/Number-Plate-Recognition" class="portfolio-link" target="_blank">
+              View Project <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <button id="show-more-btn" class="btn btn-outline-info mt-4" onclick="toggleProjects()">
+          <i class="bx bx-plus-circle"></i> Show More Projects
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Projects Section -->
+
+<!-- ======= Certifications & Achievements Section ======= -->
+<!-- ======= Certifications & Achievements Section ======= -->
+<section id="certifications" class="certifications section-bg">
+  <div class="container">
+
+    <div class="section-title">
+      <h2>Certifications & Achievements</h2>
+      <p>Professional recognitions and accomplishments throughout my career journey</p>
+    </div>
+
+    <!-- Pinned Certifications -->
+    <div class="row mb-5">
+      <div class="col-lg-12">
+        <h3 class="cert-category-title">Pinned Certifications</h3>
+      </div>
+
+      <div class="col-lg-6 cert-column" data-aos="fade-up">
+        <div class="cert-item pinned-cert">
+          <div class="cert-icon">
+            <i class="bx bx-bot"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Applying AI Technologies to the Workplace</h4>
+            <div class="cert-meta">
+              <span class="cert-issuer">Northeastern University</span>
+              <span class="cert-date">September 2024</span>
+            </div>
+            <p>Advanced training in practical applications of Generative AI in workplace environments</p>
+            <div class="cert-credential">Credential ID: 66f5728e4fa7ae49a8fc7a45</div>
+            <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 cert-column" data-aos="fade-up">
+        <div class="cert-item pinned-cert">
+          <div class="cert-icon">
+            <i class="bx bx-glasses"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Computer Vision Excellence</h4>
+            <div class="cert-meta">
+              <span class="cert-issuer">OpenCV.org</span>
+              <span class="cert-date">2022</span>
+            </div>
+            <p>Excellence certification in advanced Computer Vision techniques and applications</p>
+            <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 cert-column" data-aos="fade-up">
+        <div class="cert-item pinned-cert">
+          <div class="cert-icon">
+            <i class="bx bx-award"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Innovation Spark Award</h4>
+            <div class="cert-meta">
+              <span class="cert-issuer">Tata Consultancy Services</span>
+              <span class="cert-date">June 2022</span>
+            </div>
+            <p>Awarded for outstanding contribution to the organization and serving as an inspiring role model to colleagues</p>
+            <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 cert-column" data-aos="fade-up">
+        <div class="cert-item pinned-cert">
+          <div class="cert-icon">
+            <i class="bx bx-cloud"></i>
+          </div>
+          <div class="cert-content">
+            <h4>Microsoft Certified: Azure Fundamentals</h4>
+            <div class="cert-meta">
+              <span class="cert-issuer">Microsoft</span>
+              <span class="cert-date">September 2021</span>
+            </div>
+            <p>Foundational certification validating knowledge of cloud concepts and Microsoft Azure services</p>
+            <div class="cert-credential">Credential ID: 991971656</div>
+            <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- All Certifications (Expandable) -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h3 class="cert-category-title">All Certifications</h3>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="certificates-list">
+          <!-- First few visible certificates -->
+          <div class="row">
+            <div class="col-lg-6 cert-column" data-aos="fade-up">
+              <div class="cert-item">
+                <div class="cert-icon">
+                  <i class="bx bx-certification"></i>
+                </div>
+                <div class="cert-content">
+                  <h4>IP Creation Award</h4>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">Tata Consultancy Services</span>
+                    <span class="cert-date">May 2023</span>
+                  </div>
+                  <p>Recognition for intellectual property contributions and innovative solutions development</p>
+                  <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6 cert-column" data-aos="fade-up">
+              <div class="cert-item">
+                <div class="cert-icon">
+                  <i class="bx bx-brain"></i>
+                </div>
+                <div class="cert-content">
+                  <h4>Deep Learning Specialization</h4>
+                  <div class="cert-meta">
+                    <span class="cert-issuer">deeplearning.ai</span>
+                    <span class="cert-date">2021</span>
+                  </div>
+                  <p>Comprehensive training in neural networks, optimization algorithms, and deep learning architectures</p>
+                  <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hidden certificates (will be shown/hidden with JS) -->
+          <div class="hidden-certificates">
+            <div class="row">
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-medal"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>Special Achievement Award</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">Tata Consultancy Services</span>
+                      <span class="cert-date">July 2023</span>
+                    </div>
+                    <p>Awarded for dedication and commitment to excellence in project delivery</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-trophy"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>Appreciation Certificate</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">TCS Gems Program</span>
+                      <span class="cert-date">2022</span>
+                    </div>
+                    <p>Recognition as an Xcelerate Warrior for outstanding performance and achievements</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-run"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>Fresco Play Miles Award</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">Tata Consultancy Services</span>
+                      <span class="cert-date">June 2023</span>
+                    </div>
+                    <p>Awarded for completion of advanced courses in Fresco Play learning platform</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-code-alt"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>Certificate of Participation - SLOP</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">Developer Student Club - DAIICT</span>
+                      <span class="cert-date">September-November 2020</span>
+                    </div>
+                    <p>Successfully contributed as a Student Developer in Semester Long Projects 2020</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-message-square-check"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>Natural Language Processing Specialization</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">deeplearning.ai</span>
+                      <span class="cert-date">2022</span>
+                    </div>
+                    <p>Advanced training in NLP techniques including text processing, embeddings and sequence models</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-6 cert-column" data-aos="fade-up">
+                <div class="cert-item">
+                  <div class="cert-icon">
+                    <i class="bx bx-server"></i>
+                  </div>
+                  <div class="cert-content">
+                    <h4>AWS Certified Solutions Architect</h4>
+                    <div class="cert-meta">
+                      <span class="cert-issuer">Amazon Web Services</span>
+                      <span class="cert-date">2022</span>
+                    </div>
+                    <p>Expertise in designing scalable, highly available, and fault-tolerant systems on AWS</p>
+                    <a href="#" class="cert-view-link" target="_blank"><i class="bx bx-link-external"></i> View Certificate</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Show More/Less Button -->
+          <div class="text-center mt-5">
+            <button id="show-more-certificates" class="btn btn-outline-info">
+              <i class="bx bx-plus-circle"></i> Show More Certificates
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section><!-- End Certifications Section -->
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Contact Details</h2>
+          <center>
+          <p>
+            <h4>Drop me a Message for</h4><br>
+            <i>Collaboration | Research Opportunities | Mentorship | Hiring.</i>
+          </p>
+        </center>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-5 mt-5 mt-lg-0 d-flex align-items-stretch">
+            <img src="assets/img/contact_comp.jpg" alt="Connect"  height="346" width="474">
+          </div>
+
+          <div class="col-lg-7 d-flex align-items-stretch" data-aos="fade-up-left" data-aos-delay="150">
+            <div class="info">
+              <div class="address">
+                <br>
+                <i class="icofont-google-map"></i>
+                <h4><a href="https://www.google.com/maps/place/Boston,+MA,+USA" target="_blank">Location:</a></h4>
+                <p>Boston, Massachusetts, USA</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4><a href="mailto:shahi.sh1028@gmail.com" target="_blank">Email:</a></h4>
+                <p>shahi.sh1028@gmail.com</p>
+              </div>
+
+              <!-- <div class="phone">
+                <i class="icofont-phone"></i>
+                <h4><a href="https://web.whatsapp.com/" target="_blank">Call:</a></h4>
+                <p>+1 (857) 423-5879</p>
+              </div> -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End Contact Section -->
+
+    <!---Site Footer-->
+
+    <footer class="site-footer">
+      <div class="container">
+           <div>
+            <p class="text-center">Made with ❤️ by <a href="https://github.com/shashwats538">Shashwat</a>!
+            <!--- | Template by<a href="https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/"> BootstrapMade</a></p> -->
+          </div>
+      </div>
+    </footer>
+    <!--- End Footer-->
+
+  </main>
+
+  <!-- End #main -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/typed.js/typed.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
